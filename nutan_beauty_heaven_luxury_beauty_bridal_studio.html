@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutan Beauty Heaven | Luxury Beauty Parlour &amp; Bridal Studio</title>
+  <meta name="description" content="Timeless elegance, crafted just for you. Nutan Beauty Heaven offers bespoke HD bridal makeup, advanced skin care, hair therapy, and luxury salon rituals." />
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alabaster: '#FAF8F5',
+            surface: '#FFFFFF',
+            hairline: '#EAE3DC',
+            bronze: {
+              DEFAULT: '#B88655',
+              hover: '#9E7043',
+              tint: '#F4EDE4',
+              soft: '#EFE5D8'
+            },
+            espresso: '#241E1C',
+            warmgrey: '#5C534E'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+          },
+          boxShadow: {
+            'editorial': '0 24px 48px -16px rgba(36, 30, 28, 0.08)',
+            'card': '0 4px 20px -4px rgba(36, 30, 28, 0.04)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom scrollbar and subtle editorial polish - Zero purple tones anywhere */
+    body {
+      background-color: #FAF8F5;
+      color: #5C534E;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .font-editorial {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: #241E1C;
+    }
+
+    /* Custom subtle input focus ring in warm champagne bronze */
+    .luxury-input:focus {
+      outline: none;
+      border-color: #B88655;
+      box-shadow: 0 0 0 3px rgba(184, 134, 85, 0.14);
+    }
+
+    /* Hide scrollbar for horizontal category pills on mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-alabaster text-warmgrey pb-20 md:pb-0 selection:bg-bronze-tint selection:text-espresso">
+
+  <!-- 1. STICKY MINIMAL NAVBAR -->
+  <header class="sticky top-0 z-40 bg-alabaster/95 backdrop-blur-md border-b border-hairline">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Title / Logo -->
+      <a href="#" class="flex items-center gap-3 group focus:outline-none">
+        <span class="w-9 h-9 rounded-full border border-bronze/50 bg-surface flex items-center justify-center text-bronze font-serif text-lg font-semibold tracking-tight transition-colors group-hover:border-bronze">
+          N
+        </span>
+        <div class="flex flex-col">
+          <span class="font-serif text-2xl sm:text-[26px] font-semibold tracking-tight text-espresso leading-none">
+            Nutan Beauty Heaven
+          </span>
+          <span class="text-[10px] uppercase tracking-[0.22em] text-bronze font-medium mt-1">
+            Salon &amp; Bridal Studio
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Anchor Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-warmgrey" aria-label="Primary Navigation">
+        <a href="#services" class="hover:text-espresso transition-colors py-2">Services</a>
+        <a href="#bridal-studio" class="hover:text-espresso transition-colors py-2">Bridal Studio</a>
+        <a href="#gallery" class="hover:text-espresso transition-colors py-2">Gallery</a>
+        <a href="#visit-us" class="hover:text-espresso transition-colors py-2">Visit Us</a>
+      </nav>
+
+      <!-- Desktop High-Contrast CTA + Mobile Menu Button -->
+      <div class="flex items-center gap-3">
+        <a href="#book-visit" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-bronze hover:bg-bronze-hover text-white text-sm font-medium tracking-wide transition-colors shadow-sm">
+          Book Appointment
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" type="button" aria-expanded="false" aria-controls="mobileNavDrawer" aria-label="Toggle navigation menu" class="md:hidden p-2.5 rounded-lg border border-hairline bg-surface text-espresso hover:border-bronze transition-colors">
+          <!-- Hamburger Thin-Stroke SVG -->
+          <svg id="menuIconOpen" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+          <!-- Close Thin-Stroke SVG -->
+          <svg id="menuIconClose" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileNavDrawer" class="hidden md:hidden bg-surface border-b border-hairline px-4 pt-3 pb-5">
+      <nav class="flex flex-col space-y-1 text-base font-medium text-espresso">
+        <a href="#services" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-alabaster transition-colors">Services</a>
+        <a href="#bridal-studio" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-alabaster transition-colors">Bridal Studio</a>
+        <a href="#gallery" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-alabaster transition-colors">Gallery</a>
+        <a href="#visit-us" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-alabaster transition-colors">Visit Us</a>
+        <div class="pt-2">
+          <a href="#book-visit" class="mobile-nav-link w-full inline-flex items-center justify-center px-5 py-3 rounded-lg bg-bronze hover:bg-bronze-hover text-white text-sm font-medium transition-colors">
+            Book Appointment
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION (ABOVE THE FOLD) -->
+    <section class="relative pt-10 pb-16 sm:pt-14 sm:pb-24 lg:pt-20 lg:pb-28 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+
+          <!-- Left Column: Editorial Value Proposition -->
+          <div class="lg:col-span-6 text-left">
+            <div class="inline-flex items-center gap-2.5 mb-5">
+              <span class="w-8 h-[1px] bg-bronze"></span>
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-bronze">
+                Premium Beauty &amp; Bridal Studio
+              </span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-[58px] font-semibold text-espresso leading-[1.08] tracking-tight mb-6">
+              Timeless Elegance, Crafted Just For You
+            </h1>
+
+            <p class="text-base sm:text-lg text-warmgrey leading-relaxed max-w-xl mb-8">
+              Experience personalized skin therapies, luminous hair rituals, and bespoke HD bridal artistry in a serene, hygiene-first sanctuary designed around your natural radiance.
+            </p>
+
+            <!-- Dual Conversion Buttons -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 mb-10">
+              <a href="#book-visit" class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-lg bg-bronze hover:bg-bronze-hover text-white text-sm sm:text-base font-medium tracking-wide transition-colors shadow-sm">
+                <span>Book Your Visit</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <a href="#services" class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg bg-surface border border-hairline hover:border-bronze text-espresso text-sm sm:text-base font-medium tracking-wide transition-colors">
+                View Services
+              </a>
+            </div>
+
+            <!-- Subtle Editorial Proof Line -->
+            <div class="pt-6 border-t border-hairline flex flex-wrap items-center gap-x-8 gap-y-3 text-xs sm:text-sm text-warmgrey">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-bronze shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Pre-Bridal Skin Consultations</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-bronze shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>100% Single-Use Hygiene Kits</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Framed Editorial Bridal / Beauty Portrait -->
+          <div class="lg:col-span-6">
+            <div class="relative max-w-md mx-auto lg:max-w-none lg:pl-6">
+              <!-- Offset Delicate Bronze Hairline Frame -->
+              <div class="hidden sm:block absolute -top-4 right-0 left-10 bottom-4 rounded-2xl border border-bronze/45 pointer-events-none"></div>
+
+              <!-- Main Portrait Container -->
+              <div class="relative rounded-2xl overflow-hidden bg-bronze-tint border border-hairline shadow-editorial aspect-[4/5]">
+                <img
+                  src="https://images.unsplash.com/photo-1610173827043-9db50e0d8ef9?auto=format&fit=crop&w=1000&q=85"
+                  alt="Indian bride with luminous, natural HD bridal makeup and traditional gold jewelry at Nutan Beauty Heaven"
+                  class="w-full h-full object-cover object-center"
+                  onerror="this.onerror=null;this.src='https://placehold.co/800x1000/F4EDE4/241E1C?text=Nutan+Beauty+Heaven+Bridal+Studio';"
+                />
+
+                <!-- Refined Floating Studio Credential Card -->
+                <div class="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-auto bg-surface/95 backdrop-blur-sm border border-hairline rounded-xl px-4 py-3 shadow-card">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-bronze font-semibold">
+                    Signature Artistry
+                  </p>
+                  <p class="font-serif text-lg font-semibold text-espresso leading-snug">
+                    Luminous HD Bridal &amp; Skin Studio
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WHY CHOOSE US (TRUST STRIP) -->
+    <section aria-label="Why Choose Nutan Beauty Heaven" class="bg-surface border-y border-hairline">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-10 divide-y md:divide-y-0 md:divide-x divide-hairline">
+
+          <!-- Pillar 1 -->
+          <div class="flex items-start gap-4 pt-2 md:pt-0">
+            <div class="w-11 h-11 rounded-xl bg-bronze-tint border border-bronze/20 flex items-center justify-center text-bronze shrink-0 mt-0.5">
+              <!-- Thin-Stroke Shield / Sparkle SVG -->
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-serif text-xl font-semibold text-espresso leading-snug mb-1">
+                Dermatologically Safe &amp; Premium Brands
+              </h2>
+              <p class="text-sm text-warmgrey leading-relaxed">
+                Skin-tested international formulations carefully selected for Indian skin tones and sensitivities.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="flex items-start gap-4 pt-6 md:pt-0 md:pl-6 lg:pl-10">
+            <div class="w-11 h-11 rounded-xl bg-bronze-tint border border-bronze/20 flex items-center justify-center text-bronze shrink-0 mt-0.5">
+              <!-- Thin-Stroke Hygiene / Droplet Check SVG -->
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                <path d="m9.5 13.5 2 2 3.5-4"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-serif text-xl font-semibold text-espresso leading-snug mb-1">
+                Strict Hygiene &amp; Single-Use Essentials
+              </h2>
+              <p class="text-sm text-warmgrey leading-relaxed">
+                Hospital-grade tool sterilization and sealed disposable kits opened fresh for every guest.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="flex items-start gap-4 pt-6 md:pt-0 md:pl-6 lg:pl-10">
+            <div class="w-11 h-11 rounded-xl bg-bronze-tint border border-bronze/20 flex items-center justify-center text-bronze shrink-0 mt-0.5">
+              <!-- Thin-Stroke Crown / Personalized Artistry SVG -->
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-serif text-xl font-semibold text-espresso leading-snug mb-1">
+                Personalized Consultations &amp; Bridal Expertise
+              </h2>
+              <p class="text-sm text-warmgrey leading-relaxed">
+                One-on-one skin analysis and custom HD bridal styling tailored to your features and attire.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CURATED SERVICES SECTION -->
+    <section id="services" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="max-w-2xl mb-10 sm:mb-12">
+          <div class="inline-flex items-center gap-2.5 mb-3">
+            <span class="w-6 h-[1px] bg-bronze"></span>
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-bronze">
+              Curated Menu
+            </span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-[42px] font-semibold text-espresso leading-tight mb-3">
+            Bespoke Salon &amp; Bridal Services
+          </h2>
+          <p class="text-base text-warmgrey leading-relaxed">
+            Transparent starting tariffs with personalized consultation before every ritual. Select any service to reserve your slot.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-8 border-b border-hairline" role="tablist" aria-label="Service Categories">
+          <button type="button" data-category="all" class="service-tab active px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors bg-bronze text-white">
+            All Services
+          </button>
+          <button type="button" data-category="bridal" class="service-tab px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors bg-surface border border-hairline text-warmgrey hover:text-espresso hover:border-bronze">
+            Bridal &amp; Occasion
+          </button>
+          <button type="button" data-category="skin" class="service-tab px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors bg-surface border border-hairline text-warmgrey hover:text-espresso hover:border-bronze">
+            Skin &amp; Facial Care
+          </button>
+          <button type="button" data-category="hair" class="service-tab px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors bg-surface border border-hairline text-warmgrey hover:text-espresso hover:border-bronze">
+            Hair Care &amp; Styling
+          </button>
+          <button type="button" data-category="essentials" class="service-tab px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors bg-surface border border-hairline text-warmgrey hover:text-espresso hover:border-bronze">
+            Hand, Foot &amp; Essentials
+          </button>
+        </div>
+
+        <!-- Categorized Services Grid -->
+        <div id="servicesContainer" class="space-y-12">
+
+          <!-- Category 1: Bridal & Occasion Makeup -->
+          <div id="bridal-studio" data-group="bridal" class="service-group scroll-mt-28">
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="font-serif text-2xl sm:text-[28px] font-semibold text-espresso">
+                Bridal &amp; Occasion Makeup
+              </h3>
+              <span class="text-xs uppercase tracking-[0.16em] text-bronze font-medium hidden sm:inline">
+                HD &amp; Airbrush Artistry
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <!-- Card 1 -->
+              <article class="bg-surface border border-hairline hover:border-bronze/60 rounded-xl p-6 flex flex-col justify-between transition-colors shadow-card">
+                <div>
+                  <div class="flex items-start justify-between gap-3 mb-2">
+                    <h4 class="font-serif text-xl font-semibold text-espresso leading-snug">
+                      HD Bridal Makeup
+                    </h4>
+                  </div>
+                  <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                    Flawless, sweat-resistant airbrushed radiance with bespoke hairstyling, lashes, and dupatta draping.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block text-[11px] uppercase tracking-wider text-warmgrey">Starting at</span>
+                    <span class="text-base font-semibold text-espresso">&#8377;14,999</span>
+                  </div>
+                  <button type="button" data-book-service="HD Bridal Makeup" class="book-service-btn inline-flex items-center gap-1.5 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors py-1.5 px-2.5 rounded-lg hover:bg-bronze-tint">
+                    <span>Consult &amp; Book</span>
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="bg-surface border border-hairline hover:border-bronze/60 rounded-xl p-6 flex flex-col justify-between transition-colors shadow-card">
+                <div>
+                  <div class="flex items-start justify-between gap-3 mb-2">
+                    <h4 class="font-serif text-xl font-semibold text-espresso leading-snug">
+                      Engagement &amp; Reception Look
+                    </h4>
+                  </div>
+                  <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                    Soft-glam luminous finish with custom floral or sculpted hairstyling tailored to evening lighting.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block text-[11px] uppercase tracking-wider text-warmgrey">Starting at</span>
+                    <span class="text-base font-semibold text-espresso">&#8377;6,999</span>
+                  </div>
+                  <button type="button" data-book-service="Engagement &amp; Reception Look" class="book-service-btn inline-flex items-center gap-1.5 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors py-1.5 px-2.5 rounded-lg hover:bg-bronze-tint">
+                    <span>Consult &amp; Book</span>
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="bg-surface border border-hairline hover:border-bronze/60 rounded-xl p-6 flex flex-col justify-between transition-colors shadow-card">
+                <div>
+                  <div class="flex items-start justify-between gap-3 mb-2">
+                    <h4 class="font-serif text-xl font-semibold text-espresso leading-snug">
+                      Party &amp; Festive Glam
+                    </h4>
+                  </div>
+                  <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                    Elegant, skin-like camera-ready makeup and styling crafted for wedding guests and celebrations.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block text-[11px] uppercase tracking-wider text-warmgrey">Starting at</span>
+                    <span class="text-base font-semibold text-espresso">&#8377;2,499</span>
+                  </div>
+                  <button type="button" data-book-service="Party &amp; Festive Glam" class="book-service-btn inline-flex items-center gap-1.5 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors py-1.5 px-2.5 rounded-lg hover:bg-bronze-tint">
+                    <span>Consult &amp; Book</span>
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Category 2: Skin & Facial Care -->
+          <div data-group="skin" class="service-group">
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="font-serif text-2xl sm:text-[28px] font-semibold text-espresso">
+                Skin &amp; Facial Care
+              </h3>
+              <span class="text-xs uppercase tracking-[0.16em] text-bronze font-medium hidden sm:inline">
+                Dermal &amp; Botanical Rituals
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <!-- Card 1 -->
+              <article class="bg-surface border border-hairline hover:border-bronze/60 rounded-xl p-6 flex flex-col justify-between transition-colors shadow-card">
+                <div>
+                  <h4 class="font-serif text-xl font-semibold text-espresso leading-snug mb-2">
+                    Hydra Glow Facial
+                  </h4>
+                  <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                    Multi-step serum infusion and gentle exfoliation for instant glass-skin hydration and plumpness.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block text-[11px] uppercase tracking-wider text-warmgrey">Starting at</span>
+                    <span class="text-base font-semibold text-espresso">&#8377;1,999</span>
+                  </div>
+                  <button type="button" data-book-service="Hydra Glow Facial" class="book-service-btn inline-flex items-center gap-1.5 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors py-1.5 px-2.5 rounded-lg hover:bg-bronze-tint">
+                    <span>Consult &amp; Book</span>
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="bg-surface border border-hairline hover:border-bronze/60 rounded-xl p-6 flex flex-col justify-between transition-colors shadow-card">
+                <div>
+                  <h4 class="font-serif text-xl font-semibold text-espresso leading-snug mb-2">
+                    De-Tan &amp; Brightening Ritual
+                  </h4>
+                  <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                    Targets stubborn sun tan, dullness, and uneven complexion for visible clarity in a single session.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block text-[11px] uppercase tracking-wider text-warmgrey">Starting at</span>
+                    <span class="text-base font-semibold text-espresso">&#8377;1,199</span>
+                  </div>
+                  <button type="button" data-book-service="De-Tan &amp; Brightening Ritual" class="book-service-btn inline-flex items-center gap-1.5 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors py-1.5 px-2.5 rounded-lg hover:bg-bronze-tint">
+                    <span>Consult &amp; Book</span>
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="bg-surface border border-hairline hover:border-bronze/60 rounded-xl p-6 flex flex-col justify-between transition-colors shadow-card">
+                <div>
+                  <h4 class="font-serif text-xl font-semibold text-espresso leading-snug mb-2">
+                    Organic Botanical Cleanup
+                  </h4>
+                  <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                    Soothing pore purification and calming mask ideal for sensitive skin and monthly upkeep.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block text-[11px] uppercase tracking-wider text-warmgrey">Starting at</span>
+                    <span class="text-base font-semibold text-espresso">&#8377;799</span>
+                  </div>
+                  <button type="button" data-book-service="Organic Botanical Cleanup" class="book-service-btn inline-flex items-center gap-1.5 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors py-1.5 px-2.5 rounded-lg hover:bg-bronze-tint">
+                    <span>Consult &amp; Book</span>
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Category 3: Hair Care & Styling -->
+          <div data-group="hair" class="service-group">
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="font-serif text-2xl sm:text-[28px] font-semibold text-espresso">
+                Hair Care &amp; Styling
+              </h3>
+              <span class="text-xs uppercase tracking-[0.16em] text-bronze font-medium hidden sm:inline">
+                Repair, Gloss &amp; Cuts
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <!-- Card 1 -->
+              <article class="bg-surface border border-hairline hover:border-bronze/60 rounded-xl p-6 flex flex-col justify-between transition-colors shadow-card">
+                <div>
+                  <h4 class="font-serif text-xl font-semibold text-espresso leading-snug mb-2">
+                    Keratin &amp; Smoothening Therapy
+                  </h4>
+                  <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                    Eliminates frizz and restores mirror-like silkiness and manageability for up to 4 months.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block text-[11px] uppercase tracking-wider text-warmgrey">Starting at</span>
+                    <span class="text-base font-semibold text-espresso">&#8377;3,499</span>
+                  </div>
+                  <button type="button" data-book-service="Keratin &amp; Smoothening Therapy" class="book-service-btn inline-flex items-center gap-1.5 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors py-1.5 px-2.5 rounded-lg hover:bg-bronze-tint">
+                    <span>Consult &amp; Book</span>
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="bg-surface border border-hairline hover:border-bronze/60 rounded-xl p-6 flex flex-col justify-between transition-colors shadow-card">
+                <div>
+                  <h4 class="font-serif text-xl font-semibold text-espresso leading-snug mb-2">
+                    Deep Nourishing Hair Spa
+                  </h4>
+                  <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                    Intensive lipid mask, acupressure scalp massage, and ozone steam to revive dry, stressed strands.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block text-[11px] uppercase tracking-wider text-warmgrey">Starting at</span>
+                    <span class="text-base font-semibold text-espresso">&#8377;999</span>
+                  </div>
+                  <button type="button" data-book-service="Deep Nourishing Hair Spa" class="book-service-btn inline-flex items-center gap-1.5 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors py-1.5 px-2.5 rounded-lg hover:bg-bronze-tint">
+                    <span>Consult &amp; Book</span>
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="bg-surface border border-hairline hover:border-bronze/60 rounded-xl p-6 flex flex-col justify-between transition-colors shadow-card">
+                <div>
+                  <h4 class="font-serif text-xl font-semibold text-espresso leading-snug mb-2">
+                    Precision Haircut &amp; Styling
+                  </h4>
+                  <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                    Face-framing layers, rejuvenating wash, and bouncy salon blow-dry or soft waves.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block text-[11px] uppercase tracking-wider text-warmgrey">Starting at</span>
+                    <span class="text-base font-semibold text-espresso">&#8377;599</span>
+                  </div>
+                  <button type="button" data-book-service="Precision Haircut &amp; Styling" class="book-service-btn inline-flex items-center gap-1.5 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors py-1.5 px-2.5 rounded-lg hover:bg-bronze-tint">
+                    <span>Consult &amp; Book</span>
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Category 4: Hand, Foot & Essentials -->
+          <div data-group="essentials" class="service-group">
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="font-serif text-2xl sm:text-[28px] font-semibold text-espresso">
+                Hand, Foot &amp; Essentials
+              </h3>
+              <span class="text-xs uppercase tracking-[0.16em] text-bronze font-medium hidden sm:inline">
+                Hygienic Grooming
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <!-- Card 1 -->
+              <article class="bg-surface border border-hairline hover:border-bronze/60 rounded-xl p-6 flex flex-col justify-between transition-colors shadow-card">
+                <div>
+                  <h4 class="font-serif text-xl font-semibold text-espresso leading-snug mb-2">
+                    Luxury Spa Manicure &amp; Pedicure
+                  </h4>
+                  <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                    Sea-salt soak, gentle cuticle care, brightening scrub, warm paraffin mask, and relaxing reflexology massage.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block text-[11px] uppercase tracking-wider text-warmgrey">Starting at</span>
+                    <span class="text-base font-semibold text-espresso">&#8377;1,299</span>
+                  </div>
+                  <button type="button" data-book-service="Luxury Spa Manicure &amp; Pedicure" class="book-service-btn inline-flex items-center gap-1.5 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors py-1.5 px-2.5 rounded-lg hover:bg-bronze-tint">
+                    <span>Consult &amp; Book</span>
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="bg-surface border border-hairline hover:border-bronze/60 rounded-xl p-6 flex flex-col justify-between transition-colors shadow-card">
+                <div>
+                  <h4 class="font-serif text-xl font-semibold text-espresso leading-snug mb-2">
+                    Rica Waxing &amp; Precision Threading
+                  </h4>
+                  <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                    Colophony-free liposoluble Rica wax with disposable spatulas and aloe-calming post-care for silky comfort.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+                  <div>
+                    <span class="block text-[11px] uppercase tracking-wider text-warmgrey">Starting at</span>
+                    <span class="text-base font-semibold text-espresso">&#8377;199</span>
+                  </div>
+                  <button type="button" data-book-service="Rica Waxing &amp; Precision Threading" class="book-service-btn inline-flex items-center gap-1.5 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors py-1.5 px-2.5 rounded-lg hover:bg-bronze-tint">
+                    <span>Consult &amp; Book</span>
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. BRIDAL & TRANSFORMATION GALLERY -->
+    <section id="gallery" class="py-16 sm:py-24 bg-surface border-y border-hairline">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
+          <div class="max-w-xl">
+            <div class="inline-flex items-center gap-2.5 mb-3">
+              <span class="w-6 h-[1px] bg-bronze"></span>
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-bronze">
+                Studio Portfolio
+              </span>
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-[42px] font-semibold text-espresso leading-tight">
+              Bridal Radiance &amp; Studio Moments
+            </h2>
+          </div>
+
+          <a href="https://www.instagram.com/_nutan.beauty.heaven_/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 text-sm font-medium text-espresso hover:text-bronze transition-colors self-start md:self-auto py-2 px-4 rounded-lg border border-hairline bg-alabaster">
+            <svg class="w-4 h-4 text-bronze" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>@_nutan.beauty.heaven_</span>
+          </a>
+        </div>
+
+        <!-- Asymmetric Editorial 5-Photo Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 sm:gap-5">
+
+          <!-- Large Feature Photo (Left) -->
+          <figure class="lg:col-span-5 relative group rounded-2xl overflow-hidden border border-hairline bg-alabaster aspect-[4/5] lg:aspect-auto lg:h-[520px]">
+            <img
+              src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?auto=format&fit=crop&w=900&q=85"
+              alt="Royal Indian Bridal Makeup and Jewelry Styling"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              onerror="this.onerror=null;this.src='https://placehold.co/700x900/F4EDE4/241E1C?text=Royal+Bridal+Look';"
+            />
+            <figcaption class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-espresso/80 via-espresso/30 to-transparent text-white">
+              <span class="block text-[11px] uppercase tracking-[0.18em] text-bronze-soft">Signature Bridal</span>
+              <span class="font-serif text-xl font-medium">Luminous Velvet Bridal Finish</span>
+            </figcaption>
+          </figure>
+
+          <!-- Right 2x2 Asymmetric Grid -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+            <!-- Top Left -->
+            <figure class="relative group rounded-2xl overflow-hidden border border-hairline bg-alabaster h-60 sm:h-[250px]">
+              <img
+                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=85"
+                alt="Hydra Glow Facial and Botanical Skin Therapy"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                onerror="this.onerror=null;this.src='https://placehold.co/700x500/F4EDE4/241E1C?text=Hydra+Glow+Facial';"
+              />
+              <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-espresso/75 to-transparent text-white">
+                <span class="font-serif text-lg font-medium">Glass-Skin Hydra Ritual</span>
+              </figcaption>
+            </figure>
+
+            <!-- Top Right -->
+            <figure class="relative group rounded-2xl overflow-hidden border border-hairline bg-alabaster h-60 sm:h-[250px]">
+              <img
+                src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=800&q=85"
+                alt="Soft Glam Engagement Makeup Artistry"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                onerror="this.onerror=null;this.src='https://placehold.co/700x500/F4EDE4/241E1C?text=Engagement+Soft+Glam';"
+              />
+              <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-espresso/75 to-transparent text-white">
+                <span class="font-serif text-lg font-medium">Engagement &amp; Reception Glam</span>
+              </figcaption>
+            </figure>
+
+            <!-- Bottom Left -->
+            <figure class="relative group rounded-2xl overflow-hidden border border-hairline bg-alabaster h-60 sm:h-[250px]">
+              <img
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=85"
+                alt="Silky Keratin Hair Care and Bridal Hairstyling"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                onerror="this.onerror=null;this.src='https://placehold.co/700x500/F4EDE4/241E1C?text=Hair+Styling+%26+Keratin';"
+              />
+              <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-espresso/75 to-transparent text-white">
+                <span class="font-serif text-lg font-medium">Bespoke Hairstyling &amp; Keratin</span>
+              </figcaption>
+            </figure>
+
+            <!-- Bottom Right -->
+            <figure class="relative group rounded-2xl overflow-hidden border border-hairline bg-alabaster h-60 sm:h-[250px]">
+              <img
+                src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=85"
+                alt="Serene Minimalist Luxury Salon Ambience"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                onerror="this.onerror=null;this.src='https://placehold.co/700x500/F4EDE4/241E1C?text=Serene+Salon+Ambience';"
+              />
+              <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-espresso/75 to-transparent text-white">
+                <span class="font-serif text-lg font-medium">Calm, Hygienic Studio Ambience</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Subtle Instagram Portfolio CTA Strip -->
+        <div class="mt-8 pt-6 border-t border-hairline flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <p class="text-sm text-warmgrey">
+            View unedited real-bride transformations, pre-bridal results, and seasonal studio offers on Instagram.
+          </p>
+          <a href="https://www.instagram.com/_nutan.beauty.heaven_/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium text-bronze hover:text-bronze-hover transition-colors shrink-0">
+            <span>Follow @_nutan.beauty.heaven_</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. CLIENT REVIEWS -->
+    <section aria-label="Client Testimonials" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-2xl mb-10 sm:mb-12">
+          <div class="inline-flex items-center gap-2.5 mb-3">
+            <span class="w-6 h-[1px] bg-bronze"></span>
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-bronze">
+              Client Stories
+            </span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-[42px] font-semibold text-espresso leading-tight">
+            Trusted by Brides &amp; Regular Guests
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Review 1 -->
+          <article class="bg-surface border border-hairline rounded-xl p-6 sm:p-7 flex flex-col justify-between shadow-card">
+            <div>
+              <!-- 5 Warm Gold SVG Stars -->
+              <div class="flex items-center gap-1 text-bronze mb-4" aria-label="5 out of 5 stars">
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="text-sm sm:text-[15px] text-espresso leading-relaxed mb-6">
+                "Booked my wedding and engagement looks at Nutan Beauty Heaven. The HD base felt so lightweight and stayed completely fresh through all rituals until morning without looking cakey."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-hairline flex items-center justify-between">
+              <div>
+                <p class="font-serif text-lg font-semibold text-espresso">Ananya Sharma</p>
+                <p class="text-xs text-warmgrey">Verified Bridal Client</p>
+              </div>
+              <span class="text-xs font-medium px-2.5 py-1 rounded-md bg-bronze-tint text-bronze">
+                HD Bridal Makeup
+              </span>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="bg-surface border border-hairline rounded-xl p-6 sm:p-7 flex flex-col justify-between shadow-card">
+            <div>
+              <div class="flex items-center gap-1 text-bronze mb-4" aria-label="5 out of 5 stars">
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="text-sm sm:text-[15px] text-espresso leading-relaxed mb-6">
+                "What impressed me most is their strict hygiene. Every sponge, sheet, and waxing applicator was opened right in front of me. The Hydra Glow Facial gave my skin an immediate, calm radiance."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-hairline flex items-center justify-between">
+              <div>
+                <p class="font-serif text-lg font-semibold text-espresso">Priya Malhotra</p>
+                <p class="text-xs text-warmgrey">Regular Salon Guest</p>
+              </div>
+              <span class="text-xs font-medium px-2.5 py-1 rounded-md bg-bronze-tint text-bronze">
+                Hydra Glow Facial
+              </span>
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="bg-surface border border-hairline rounded-xl p-6 sm:p-7 flex flex-col justify-between shadow-card">
+            <div>
+              <div class="flex items-center gap-1 text-bronze mb-4" aria-label="5 out of 5 stars">
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-bronze" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="text-sm sm:text-[15px] text-espresso leading-relaxed mb-6">
+                "Warm, courteous staff who actually listen before starting. They recommended a nourishing hair spa and keratin treatment tailored to my dry hair, and the shine has lasted months."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-hairline flex items-center justify-between">
+              <div>
+                <p class="font-serif text-lg font-semibold text-espresso">Ritika Verma</p>
+                <p class="text-xs text-warmgrey">Verified Client</p>
+              </div>
+              <span class="text-xs font-medium px-2.5 py-1 rounded-md bg-bronze-tint text-bronze">
+                Keratin &amp; Hair Spa
+              </span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. VISIT US & QUICK APPOINTMENT SECTION (CONVERSION FOOTER) -->
+    <footer id="visit-us" class="bg-surface border-t border-hairline pt-16 sm:pt-24 pb-10">
+      <div id="book-visit" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start pb-14 border-b border-hairline">
+
+          <!-- Left Column: Studio Address, Hours, Direct Call/WhatsApp & Architectural Map -->
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <div class="inline-flex items-center gap-2.5 mb-3">
+                <span class="w-6 h-[1px] bg-bronze"></span>
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-bronze">
+                  Visit The Studio
+                </span>
+              </div>
+              <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-espresso leading-tight mb-3">
+                Begin Your Beauty Ritual
+              </h2>
+              <p class="text-sm sm:text-base text-warmgrey leading-relaxed">
+                Walk-ins are welcomed based on availability. Pre-booking is recommended for bridal consultations, facials, and weekend slots.
+              </p>
+            </div>
+
+            <!-- Address & Timings Details -->
+            <div class="space-y-4 pt-2">
+              <div class="flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-lg bg-alabaster border border-hairline flex items-center justify-center text-bronze shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-serif text-lg font-semibold text-espresso">Studio Address</h3>
+                  <p class="text-sm text-warmgrey leading-relaxed">
+                    Nutan Beauty Heaven, Main Market Road<br />
+                    <span class="text-xs text-warmgrey/85">Connect on WhatsApp or Instagram for exact pin location</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-lg bg-alabaster border border-hairline flex items-center justify-center text-bronze shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-serif text-lg font-semibold text-espresso">Salon Hours</h3>
+                  <p class="text-sm text-warmgrey">
+                    Mon – Sun: 10:00 AM – 8:00 PM (Open All 7 Days)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Click-to-Call & Direct WhatsApp Action Buttons -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <a href="tel:+919876543210" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-alabaster hover:bg-bronze-tint border border-hairline hover:border-bronze text-espresso text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 text-bronze" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Call Studio</span>
+              </a>
+
+              <a id="directWhatsAppBtn" href="https://wa.me/919876543210?text=Hello%20Nutan%20Beauty%20Heaven%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-espresso hover:bg-espresso/90 text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 text-bronze-soft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                <span>WhatsApp Booking</span>
+              </a>
+            </div>
+
+            <!-- Styled Clean Architectural Salon Map Placeholder -->
+            <div class="relative rounded-xl border border-hairline bg-alabaster overflow-hidden h-44">
+              <!-- Minimalist Architectural Street Grid SVG -->
+              <svg class="w-full h-full" viewBox="0 0 400 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="400" height="180" fill="#FAF8F5" />
+                <path d="M0 45H400M0 115H400M95 0V180M275 0V180" stroke="#EAE3DC" stroke-width="6" />
+                <path d="M0 155L400 25" stroke="#EFE5D8" stroke-width="8" />
+                <rect x="115" y="60" width="140" height="42" rx="6" fill="#FFFFFF" stroke="#EAE3DC" />
+              </svg>
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                <div class="w-9 h-9 rounded-full bg-bronze text-white flex items-center justify-center shadow-md mb-1.5">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <span class="font-serif text-base font-semibold text-espresso bg-surface/95 px-3 py-0.5 rounded-md border border-hairline">
+                  Nutan Beauty Heaven Studio
+                </span>
+                <a href="https://www.instagram.com/_nutan.beauty.heaven_/" target="_blank" rel="noopener noreferrer" class="mt-1.5 text-xs font-medium text-bronze hover:text-bronze-hover underline underline-offset-4">
+                  Request Live Pin on Instagram / WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Friction-Free 4-Field Quick Appointment Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-alabaster border border-hairline rounded-2xl p-6 sm:p-9 shadow-card">
+
+              <!-- Form View -->
+              <div id="bookingFormWrapper">
+                <div class="mb-6">
+                  <span class="text-xs font-semibold uppercase tracking-[0.18em] text-bronze">
+                    Instant Reservation
+                  </span>
+                  <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-espresso mt-1">
+                    Request Your Appointment
+                  </h3>
+                  <p class="text-sm text-warmgrey mt-1">
+                    Fill in 4 quick details and our studio coordinator will confirm your preferred slot shortly.
+                  </p>
+                </div>
+
+                <!-- Inline Validation Feedback Banner (Replaces alert) -->
+                <div id="formErrorBanner" role="alert" class="hidden mb-5 p-3.5 rounded-lg bg-surface border border-bronze text-espresso text-sm flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-bronze shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  <span id="formErrorText">Please complete all required fields.</span>
+                </div>
+
+                <form id="appointmentForm" novalidate class="space-y-4">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Field 1: Full Name -->
+                    <div>
+                      <label for="clientName" class="block text-xs font-semibold uppercase tracking-wider text-espresso mb-1.5">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="clientName"
+                        name="clientName"
+                        required
+                        placeholder="e.g., Ananya Sharma"
+                        class="luxury-input w-full px-4 py-3 rounded-lg bg-surface border border-hairline text-espresso placeholder:text-warmgrey/50 text-sm transition-colors"
+                      />
+                    </div>
+
+                    <!-- Field 2: Phone Number -->
+                    <div>
+                      <label for="clientPhone" class="block text-xs font-semibold uppercase tracking-wider text-espresso mb-1.5">
+                        Phone / WhatsApp Number *
+                      </label>
+                      <input
+                        type="tel"
+                        id="clientPhone"
+                        name="clientPhone"
+                        required
+                        inputmode="numeric"
+                        placeholder="e.g., 98765 43210"
+                        class="luxury-input w-full px-4 py-3 rounded-lg bg-surface border border-hairline text-espresso placeholder:text-warmgrey/50 text-sm transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Field 3: Select Service -->
+                    <div>
+                      <label for="serviceSelect" class="block text-xs font-semibold uppercase tracking-wider text-espresso mb-1.5">
+                        Select Service *
+                      </label>
+                      <select
+                        id="serviceSelect"
+                        name="serviceSelect"
+                        required
+                        class="luxury-input w-full px-4 py-3 rounded-lg bg-surface border border-hairline text-espresso text-sm transition-colors"
+                      >
+                        <optgroup label="Bridal &amp; Occasion Makeup">
+                          <option value="HD Bridal Makeup">HD Bridal Makeup (Starting &#8377;14,999)</option>
+                          <option value="Engagement &amp; Reception Look">Engagement &amp; Reception Look (Starting &#8377;6,999)</option>
+                          <option value="Party &amp; Festive Glam">Party &amp; Festive Glam (Starting &#8377;2,499)</option>
+                        </optgroup>
+                        <optgroup label="Skin &amp; Facial Care">
+                          <option value="Hydra Glow Facial">Hydra Glow Facial (Starting &#8377;1,999)</option>
+                          <option value="De-Tan &amp; Brightening Ritual">De-Tan &amp; Brightening Ritual (Starting &#8377;1,199)</option>
+                          <option value="Organic Botanical Cleanup">Organic Botanical Cleanup (Starting &#8377;799)</option>
+                        </optgroup>
+                        <optgroup label="Hair Care &amp; Styling">
+                          <option value="Keratin &amp; Smoothening Therapy">Keratin &amp; Smoothening Therapy (Starting &#8377;3,499)</option>
+                          <option value="Deep Nourishing Hair Spa">Deep Nourishing Hair Spa (Starting &#8377;999)</option>
+                          <option value="Precision Haircut &amp; Styling">Precision Haircut &amp; Styling (Starting &#8377;599)</option>
+                        </optgroup>
+                        <optgroup label="Hand, Foot &amp; Essentials">
+                          <option value="Luxury Spa Manicure &amp; Pedicure">Luxury Spa Manicure &amp; Pedicure (Starting &#8377;1,299)</option>
+                          <option value="Rica Waxing &amp; Precision Threading">Rica Waxing &amp; Precision Threading (Starting &#8377;199)</option>
+                        </optgroup>
+                      </select>
+                    </div>
+
+                    <!-- Field 4: Preferred Date -->
+                    <div>
+                      <label for="preferredDate" class="block text-xs font-semibold uppercase tracking-wider text-espresso mb-1.5">
+                        Preferred Date *
+                      </label>
+                      <input
+                        type="date"
+                        id="preferredDate"
+                        name="preferredDate"
+                        required
+                        class="luxury-input w-full px-4 py-3 rounded-lg bg-surface border border-hairline text-espresso text-sm transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="pt-2">
+                    <button type="submit" class="w-full py-3.5 px-6 rounded-lg bg-bronze hover:bg-bronze-hover text-white text-sm sm:text-base font-medium tracking-wide transition-colors shadow-sm flex items-center justify-center gap-2">
+                      <span>Confirm Appointment Request</span>
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <p class="text-xs text-warmgrey text-center pt-1">
+                    No advance payment required to request a slot. Rescheduling is always complimentary.
+                  </p>
+                </form>
+              </div>
+
+              <!-- Instant Confirmation State (Hidden until form submit) -->
+              <div id="bookingConfirmation" class="hidden py-4">
+                <div class="w-12 h-12 rounded-full bg-bronze-tint border border-bronze/30 text-bronze flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+
+                <span class="text-xs font-semibold uppercase tracking-[0.18em] text-bronze">
+                  Request Registered
+                </span>
+                <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-espresso mt-1 mb-2">
+                  Thank You, <span id="confirmName">Guest</span>
+                </h3>
+                <p class="text-sm text-warmgrey leading-relaxed mb-5">
+                  Your appointment request has been logged. Our studio team will reach out shortly to finalize your exact time slot.
+                </p>
+
+                <!-- Summary Receipt Card -->
+                <div class="bg-surface border border-hairline rounded-xl p-4 sm:p-5 space-y-2.5 text-sm mb-6">
+                  <div class="flex justify-between gap-4">
+                    <span class="text-warmgrey">Reference ID</span>
+                    <span id="confirmRef" class="font-semibold text-espresso">NBH-2026</span>
+                  </div>
+                  <div class="flex justify-between gap-4">
+                    <span class="text-warmgrey">Selected Service</span>
+                    <span id="confirmService" class="font-medium text-espresso text-right">HD Bridal Makeup</span>
+                  </div>
+                  <div class="flex justify-between gap-4">
+                    <span class="text-warmgrey">Preferred Date</span>
+                    <span id="confirmDate" class="font-medium text-espresso">Upcoming</span>
+                  </div>
+                  <div class="flex justify-between gap-4">
+                    <span class="text-warmgrey">Contact Number</span>
+                    <span id="confirmPhone" class="font-medium text-espresso">+91</span>
+                  </div>
+                </div>
+
+                <!-- Fast-Track via WhatsApp or Book Another -->
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a id="confirmWhatsAppLink" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 py-3 px-5 rounded-lg bg-bronze hover:bg-bronze-hover text-white text-sm font-medium transition-colors">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                    <span>Send Instant Copy on WhatsApp</span>
+                  </a>
+                  <button type="button" id="resetBookingBtn" class="py-3 px-5 rounded-lg bg-surface border border-hairline hover:border-bronze text-espresso text-sm font-medium transition-colors">
+                    Book Another
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Minimal Bottom Bar -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-warmgrey">
+          <p>&copy; 2026 Nutan Beauty Heaven. All rights reserved.</p>
+          <a href="https://www.instagram.com/_nutan.beauty.heaven_/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-espresso hover:text-bronze transition-colors font-medium">
+            <svg class="w-4 h-4 text-bronze" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>Instagram: @_nutan.beauty.heaven_</span>
+          </a>
+        </div>
+
+      </div>
+    </footer>
+  </main>
+
+  <!-- STICKY BOTTOM MOBILE CONVERSION BAR (< 768px) -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-surface/95 backdrop-blur-md border-t border-hairline px-4 py-2.5 shadow-lg">
+    <div class="grid grid-cols-2 gap-3">
+      <a href="#book-visit" class="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-bronze active:bg-bronze-hover text-white text-sm font-medium">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>Book Now</span>
+      </a>
+      <a href="https://wa.me/919876543210?text=Hello%20Nutan%20Beauty%20Heaven%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-espresso active:bg-espresso/90 text-white text-sm font-medium">
+        <svg class="w-4 h-4 text-bronze-soft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Interactive Script: Navigation, Service Category Filtering, Service Pre-fill & Booking Confirmation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Studio WhatsApp number (update with live salon number when deployed)
+      const STUDIO_WHATSAPP_NUMBER = '919876543210';
+
+      // 1. Mobile Navigation Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+      const menuIconOpen = document.getElementById('menuIconOpen');
+      const menuIconClose = document.getElementById('menuIconClose');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+      function toggleMobileMenu(forceClose) {
+        const isCurrentlyOpen = !mobileNavDrawer.classList.contains('hidden');
+        const shouldOpen = forceClose ? false : !isCurrentlyOpen;
+
+        if (shouldOpen) {
+          mobileNavDrawer.classList.remove('hidden');
+          menuIconOpen.classList.add('hidden');
+          menuIconClose.classList.remove('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          mobileNavDrawer.classList.add('hidden');
+          menuIconOpen.classList.remove('hidden');
+          menuIconClose.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
+
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function () {
+          toggleMobileMenu(false);
+        });
+      }
+
+      mobileNavLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          toggleMobileMenu(true);
+        });
+      });
+
+      // 2. Curated Services Category Tabs
+      const serviceTabs = document.querySelectorAll('.service-tab');
+      const serviceGroups = document.querySelectorAll('.service-group');
+
+      serviceTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          const selectedCategory = tab.getAttribute('data-category');
+
+          // Update active tab styling
+          serviceTabs.forEach(function (t) {
+            t.classList.remove('bg-bronze', 'text-white', 'active');
+            t.classList.add('bg-surface', 'border', 'border-hairline', 'text-warmgrey');
+          });
+          tab.classList.remove('bg-surface', 'border', 'border-hairline', 'text-warmgrey');
+          tab.classList.add('bg-bronze', 'text-white', 'active');
+
+          // Show/hide service category groups
+          serviceGroups.forEach(function (group) {
+            const groupCategory = group.getAttribute('data-group');
+            if (selectedCategory === 'all' || groupCategory === selectedCategory) {
+              group.classList.remove('hidden');
+            } else {
+              group.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // 3. "Consult & Book" Button Pre-Selection & Smooth Scroll
+      const bookServiceBtns = document.querySelectorAll('.book-service-btn');
+      const serviceSelect = document.getElementById('serviceSelect');
+      const bookingFormWrapper = document.getElementById('bookingFormWrapper');
+      const bookingConfirmation = document.getElementById('bookingConfirmation');
+      const bookVisitSection = document.getElementById('book-visit');
+      const clientNameInput = document.getElementById('clientName');
+
+      bookServiceBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const chosenService = btn.getAttribute('data-book-service');
+
+          // Reset confirmation view if user already submitted earlier
+          if (bookingConfirmation && !bookingConfirmation.classList.contains('hidden')) {
+            bookingConfirmation.classList.add('hidden');
+            bookingFormWrapper.classList.remove('hidden');
+          }
+
+          // Match dropdown option
+          if (serviceSelect && chosenService) {
+            for (let i = 0; i < serviceSelect.options.length; i++) {
+              if (serviceSelect.options[i].value === chosenService) {
+                serviceSelect.selectedIndex = i;
+                break;
+              }
+            }
+          }
+
+          // Smooth scroll to appointment form
+          if (bookVisitSection) {
+            bookVisitSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(function () {
+              if (clientNameInput) clientNameInput.focus({ preventScroll: true });
+            }, 550);
+          }
+        });
+      });
+
+      // 4. Default Preferred Date to Tomorrow (and restrict past dates)
+      const preferredDateInput = document.getElementById('preferredDate');
+      if (preferredDateInput) {
+        const today = new Date();
+        const yyyyToday = today.getFullYear();
+        const mmToday = String(today.getMonth() + 1).padStart(2, '0');
+        const ddToday = String(today.getDate()).padStart(2, '0');
+        preferredDateInput.min = yyyyToday + '-' + mmToday + '-' + ddToday;
+
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const yyyyTom = tomorrow.getFullYear();
+        const mmTom = String(tomorrow.getMonth() + 1).padStart(2, '0');
+        const ddTom = String(tomorrow.getDate()).padStart(2, '0');
+        preferredDateInput.value = yyyyTom + '-' + mmTom + '-' + ddTom;
+      }
+
+      // 5. Friction-Free 4-Field Appointment Submission & Confirmation State
+      const appointmentForm = document.getElementById('appointmentForm');
+      const formErrorBanner = document.getElementById('formErrorBanner');
+      const formErrorText = document.getElementById('formErrorText');
+
+      function showFormError(message) {
+        formErrorText.textContent = message;
+        formErrorBanner.classList.remove('hidden');
+      }
+
+      function hideFormError() {
+        formErrorBanner.classList.add('hidden');
+      }
+
+      function formatReadableDate(isoDateStr) {
+        try {
+          const parts = isoDateStr.split('-');
+          if (parts.length !== 3) return isoDateStr;
+          const dateObj = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+          return dateObj.toLocaleDateString('en-IN', {
+            weekday: 'short',
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric'
+          });
+        } catch (err) {
+          return isoDateStr;
+        }
+      }
+
+      if (appointmentForm) {
+        appointmentForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+          hideFormError();
+
+          const fullName = document.getElementById('clientName').value.trim();
+          const rawPhone = document.getElementById('clientPhone').value.trim();
+          const digitsOnly = rawPhone.replace(/\D/g, '');
+          const chosenService = serviceSelect.value;
+          const preferredDate = preferredDateInput.value;
+
+          if (fullName.length < 2) {
+            showFormError('Please enter your full name so we can reserve your appointment.');
+            document.getElementById('clientName').focus();
+            return;
+          }
+
+          if (digitsOnly.length < 10) {
+            showFormError('Please enter a valid 10-digit mobile or WhatsApp number.');
+            document.getElementById('clientPhone').focus();
+            return;
+          }
+
+          if (!preferredDate) {
+            showFormError('Please select your preferred appointment date.');
+            preferredDateInput.focus();
+            return;
+          }
+
+          // Generate clean reference ID
+          const randomCode = Math.floor(1000 + Math.random() * 9000);
+          const referenceId = 'NBH-' + randomCode;
+          const formattedDate = formatReadableDate(preferredDate);
+
+          // Populate confirmation summary
+          document.getElementById('confirmName').textContent = fullName;
+          document.getElementById('confirmRef').textContent = referenceId;
+          document.getElementById('confirmService').textContent = chosenService;
+          document.getElementById('confirmDate').textContent = formattedDate;
+          document.getElementById('confirmPhone').textContent = rawPhone;
+
+          // Build pre-filled WhatsApp fast-track message
+          const waMessage =
+            'Hello Nutan Beauty Heaven,\n' +
+            'I would like to confirm my appointment request:\n' +
+            'Ref: ' + referenceId + '\n' +
+            'Name: ' + fullName + '\n' +
+            'Service: ' + chosenService + '\n' +
+            'Preferred Date: ' + formattedDate + '\n' +
+            'Phone: ' + rawPhone;
+
+          const confirmWhatsAppLink = document.getElementById('confirmWhatsAppLink');
+          confirmWhatsAppLink.href =
+            'https://wa.me/' + STUDIO_WHATSAPP_NUMBER + '?text=' + encodeURIComponent(waMessage);
+
+          // Switch to confirmation state smoothly
+          bookingFormWrapper.classList.add('hidden');
+          bookingConfirmation.classList.remove('hidden');
+        });
+      }
+
+      // Reset form to book another appointment
+      const resetBookingBtn = document.getElementById('resetBookingBtn');
+      if (resetBookingBtn) {
+        resetBookingBtn.addEventListener('click', function () {
+          appointmentForm.reset();
+          hideFormError();
+          // Restore tomorrow's date default
+          if (preferredDateInput && preferredDateInput.min) {
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            preferredDateInput.value = tomorrow.toISOString().split('T')[0];
+          }
+          bookingConfirmation.classList.add('hidden');
+          bookingFormWrapper.classList.remove('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
